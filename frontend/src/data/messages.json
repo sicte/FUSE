@@ -1,0 +1,233 @@
+{
+    "otpInvalid": [
+        "Nice try, but that OTP's on vacation.",
+        "Wrong digits, champ. Try again!",
+        "That OTP expired faster than your last diet.",
+        "Incorrect OTP. You sure you're typing?",
+        "OTP fail. Were you even close?"
+    ],
+    "emailInvalid": [
+        "Bro… that ain't even close to an email.",
+        "Typed with your eyes closed?",
+        "Fix the email before it breaks us.",
+        "Email? That's a riddle.",
+        "Try again, email wizard."
+    ],
+    "categorySelect": [
+        "Choose a category, psychic mode is off.",
+        "Pick something... anything!",
+        "Even your vibe needs a label.",
+        "No category? Bold of you.",
+        "Tap one. Don't overthink it."
+    ],
+    "categoriesupdated": [
+        "Fresh vibes locked in.",
+        "Categories updated. Don't mess it up now.",
+        "Okay Picasso, you chose your style.",
+        "Drama now comes in HD.",
+        "You're officially subscribed to chaos."
+    ],
+    "otpVerified": [
+        "Boom! OTP flexed.",
+        "Verified. Adulting 101.",
+        "You passed the test. Barely.",
+        "OTP? More like OMG.",
+        "You did it. Finally."
+    ],
+    "usernameMandatory": [
+        "Username, not mystery vibes pls.",
+        "Even ghosts have names.",
+        "Type a name. Any name.",
+        "Username missing. Identity crisis?",
+        "Name yourself, legend."
+    ],
+    "userNameLess": [
+        "Username needs more personality.",
+        "That's not a username, it's a typo.",
+        "Add a few more letters, poet.",
+        "Too short. We blinked and missed it.",
+        "Your username's on a diet. Add more!"
+    ],
+    "userNameLarge": [
+        "Username's doing a marathon. Shorten it.",
+        "Even essays are shorter than this.",
+        "You writing a story or logging in?",
+        "Keep it short, superstar.",
+        "Long usernames = tryhard energy."
+    ],
+    "aboutLess": [
+        "Too short. Even Twitter demands more.",
+        "C'mon, tell us *something*.",
+        "More words, fewer excuses.",
+        "Are you shy or lazy?",
+        "Give us the tea, not silence!"
+    ],
+    "aboutLarge": [
+        "Writing a novel? Chill!",
+        "Wrap it up, Shakespeare.",
+        "Too long. This ain't a blog.",
+        "Save some words for tomorrow.",
+        "Brief = classy. Try it."
+    ],
+    "postTitleLess": [
+        "Post title too tiny. Pump it up!",
+        "5+ characters, not 5 emojis.",
+        "Title's missing its punch.",
+        "Add more words, Shakespeare.",
+        "That's not a title, it's a sneeze."
+    ],
+    "postTitleMore": [
+        "Shorten that title, novel-writer.",
+        "Title's longer than your to-do list.",
+        "Save some words for the post body.",
+        "Keep titles sharp, not long.",
+        "Too many characters, not enough vibe."
+    ],
+    "postBodyLess": [
+        "The body needs body!",
+        "More words, less mystery.",
+        "Give us the full story, not a tweet.",
+        "Add more drama. Or details.",
+        "We need substance, not silence."
+    ],
+    "postBodyMore": [
+        "This ain't a fantasy trilogy.",
+        "10,000 words? Save it for your book.",
+        "Too much info. Chill.",
+        "Cut the fluff, keep the fire.",
+        "Body overflow. Simplify, champ."
+    ],
+    "commentLess": [
+        "Too short. Add some spice!",
+        "Comment needs flavor, not crumbs.",
+        "Say more. Don't be shy.",
+        "Short comment, short attention span.",
+        "Be bold, say something real!"
+    ],
+    "commentMore": [
+        "Paragraphs? In comments? Bold.",
+        "This ain't your diary.",
+        "Chop chop, keep it short.",
+        "Summarize, don't sermonize.",
+        "We read comments, not novels."
+    ],
+    "logoutSuccess": [
+        "Logged out like a pro ghoster.",
+        "Gone... like your sleep schedule.",
+        "You escaped. For now.",
+        "Logout complete. Freedom smells nice.",
+        "Peace out, brave warrior."
+    ],
+    "profileImageSize": [
+        "Image too chonky. Max 5MB pls.",
+        "That pic needs a gym membership.",
+        "Try a lighter selfie, champ.",
+        "5MB. Not 50MB.",
+        "Resize it, Hulk."
+    ],
+    "postImageSize": [
+        "This ain't a Netflix upload.",
+        "Try a pic, not a wallpaper.",
+        "Compress that beast.",
+        "Too heavy. Like my regrets.",
+        "Image thicc. Server said no."
+    ],
+    "imageSuccess": [
+        "Pic uploaded. Slay confirmed.",
+        "Lookin' sharp, upload done.",
+        "Nice! Now you're photogenic.",
+        "Upload? More like glow-up.",
+        "Server approves the face."
+    ],
+    "mediaUploadFail": [
+        "Upload failed. RIP.",
+        "Nope. Try that again.",
+        "Lost in upload purgatory.",
+        "Upload ghosted you.",
+        "Try again. This one flopped."
+    ],
+    "postTitleMust": [
+        "Title, please. Not telepathy.",
+        "Name your masterpiece.",
+        "Even memes have titles.",
+        "No title, no post.",
+        "Title = power. Use it."
+    ],
+    "messageReceived": [
+        "You got a message from",
+        "Someone remembered you:",
+        "New DM alert from",
+        "Message time! Sender:",
+        "DM vibes from"
+    ],
+    "messageLong": [
+        "Message too long. Chill.",
+        "4000 characters? Write a book instead.",
+        "Too much tea. Shorten it.",
+        "Edit that essay down, buddy.",
+        "Say less. Literally."
+    ],
+    "selfMessage": [
+        "You tryna talk to yourself? Therapy might be cheaper 🧠",
+        "Messaging yourself? Bold. And a little sad 😔",
+        "Sorry, no echo chamber here 🔇",
+        "You can't message yourself. Go make a friend 🫂",
+        "Nice try, but we don't support self-love *that* much 💌"
+    ],
+    "imageDownloadSuccess": [
+        "Image downloaded! Now go stare at it like a weirdo 🖼️",
+        "Boom! Image secured. Picasso would be proud 🎨",
+        "Saved! Add it to your collection of 1000+ random pics 📸",
+        "Download complete. Bet you won't open it again 😂",
+        "Got the image! Hope it was worth the storage space 📁"
+    ],
+    "imageDownloadFail": [
+        "Download failed. Even the image didn't wanna be saved 💀",
+        "Oops! That image just ghosted you 👻",
+        "Couldn't save it. Blame the WiFi, not us 📡",
+        "Fail! That image said 'nope' and dipped 🏃‍♂️💨",
+        "Download flopped harder than your selfie attempts 🤳❌"
+    ],
+    "commentAdded": [
+        "Comment dropped like a truth bomb 💥",
+        "You said it. Can't unsay it now 🫨",
+        "Comment posted. Chaos initiated 🗯️",
+        "Your opinion is out there. May the internet forgive you 🙏",
+        "You typed that... on purpose? Bold move 🫣"
+    ],
+    "commentDeleted": [
+        "Comment deleted. Your words have left the building 🏃",
+        "Poof! Comment disappeared like bad exam memories ✨",
+        "Comment removed. The drama level just dropped 📉",
+        "Deleted! That comment is now history 📜",
+        "Comment gone. Like it was never there 👻"
+    ],
+    "postLinkCopy": [
+        "Link copied! Time to spread the content chaos 🚀",
+        "Copied! Your clipboard is doing its job today 📋",
+        "Post link ready to travel the internet 🌍",
+        "Boom! Link copied and ready to share 🎯",
+        "Link saved. Go be the messenger now 📨"
+    ],
+    "postLinkCopyFail": [
+        "Couldn't copy the link. Clipboard took a nap 😴",
+        "Copy failed. The link escaped somehow 🏃",
+        "Oops! Clipboard said 'not my problem' 💀",
+        "Link copy failed. Try poking it again 👆",
+        "No luck. The clipboard fumbled this one 🤦"
+    ],
+    "loginToLike": [
+        "Login first. Hearts don't hand themselves out ❤️",
+        "Want to like it? Step one: enter the building 🔐",
+        "Login required before dropping love bombs 💥",
+        "Your like is waiting outside. Login first 🚪",
+        "Hold up! Login before smashing that like 👍"
+    ],
+    "loginToComment": [
+        "Login first. Comments don't write themselves ✍️",
+        "Want to join the conversation? Login first 💬",
+        "Your keyboard is ready, but you need to login 🔐",
+        "Comment powers unlocked after login ⚡",
+        "Login first before releasing your thoughts 🧠"
+    ]
+}

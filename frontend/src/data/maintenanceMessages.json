@@ -1,0 +1,30 @@
+[
+    {
+        "title": "Oops! I broke it... again 😅",
+        "subtitle": "Our dev was confident this wouldn't crash. He was wrong. Very wrong."
+    },
+    {
+        "title": "Blame the developer 👨‍💻",
+        "subtitle": "Yep, it's my fault. I thought pushing to main on a Friday was smart."
+    },
+    {
+        "title": "We deployed bugs, not features 🐛",
+        "subtitle": "Please hold on while we pretend to fix things. It's mostly duct tape."
+    },
+    {
+        "title": "404: Developer not found 😵",
+        "subtitle": "The dev went out for coffee and never came back. So did the server."
+    },
+    {
+        "title": "Oopsie-daisy on production 🌪️",
+        "subtitle": "That 'quick fix' turned into a full-blown disaster. Classic dev move."
+    },
+    {
+        "title": "The code ran perfectly… on my machine 🧠",
+        "subtitle": "Too bad the server disagrees. We're negotiating."
+    },
+    {
+        "title": "Scheduled downtime (aka unplanned chaos) 🔧",
+        "subtitle": "I swear it worked five minutes ago. Probably gremlins in the server."
+    }
+]

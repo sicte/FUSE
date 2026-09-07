@@ -1,0 +1,42 @@
+# VS Code
+.vscode/
+.history/
+*.code-workspace
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# npm / React package tarballs
+*.tgz
+
+# Node / Frontend
+node_modules/
+dist/
+build/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Backend
+*.class
+*.jar
+*.war
+*.iml
+*.out/
+# backend/src/logs
+
+# Misc
+*.tmp
+*.swp
+*.swo
+*.bak
+*.backup
+
+*.env
+backend/.env
+frontend/.env

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuse Template Local Build & Database Integration Guide</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h1, h2, h3 {
+            color: #58a6ff;
+            border-bottom: 1px solid #21262d;
+            padding-bottom: 10px;
+        }
+        h1 { font-size: 2rem; text-align: center; margin-bottom: 30px; }
+        h2 { font-size: 1.5rem; margin-top: 40px; }
+        h3 { font-size: 1.2rem; margin-top: 20px; }
+        code {
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+            background-color: #161b22;
+            color: #ff7b72;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        pre {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 16px;
+            overflow: auto;
+        }
+        pre code {
+            color: #c9d1d9;
+            background-color: transparent;
+            padding: 0;
+            font-size: 0.9rem;
+        }
+        .success-box {
+            background-color: #13231b;
+            border-left: 4px solid #2ea043;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+    </style>
+</head>
+<body>
+
+    <h1>🚀 Fuse Template Local Build & Database Integration Guide</h1>
+    
+    <p>This guide is the final master manual summarizing guidelines for perfect integration and 100% uninterrupted operation of the Vite (React) frontend and Node.js (Express) + PostgreSQL backend architecture in a local environment.</p>
+
+    <div class="success-box">
+        <strong>⚙️ Integrity Synchronization Complete:</strong> Full infrastructure automation built-in for user registration (users), email verification (otps), image posting (posts), real-time 1-on-1 chat (messages), and post comments (comments).
+    </div>
+
+    <h2>📂 1. Database Full Automation Fortress Setup (db.js)</h2>
+    <p>The top-level connection file that self-diagnoses database infrastructure when the backend server runs, checks for table existence, and forces synchronization to auto-build if specifications or types mismatch.</p>
+    <p><strong>File Physical Location:</strong> <code>backend/src/model/db.js</code></p>
+    
+    <pre><code>const { Pool } = require('pg');
+require('dotenv').config();
+
+const dbName = process.env.DB_NAME || 'fuse';
+
+async function ensureDatabaseExists() {
+    const tempPool = new Pool({
+        host: process.env.DB_HOST || 'localhost',
+        port: process.env.DB_PORT || 5432,
+        user: process.env.DB_USER,
+        password: process.env.DB_PASSWORD,
+        database: 'postgres',
+        ssl: false,
+    });
+
+    try {
+        const res = await tempPool.query('SELECT 1 FROM pg_database WHERE datname = $1', [dbName]);
+        if (res.rows.length === 0) {
+            console.log(`⏳ [DB Notice] Database "${dbName}" does not exist. Creating database automatically...`);
+            const safeDbName = dbName.replace(/"/g, '""');
+            await tempPool.query(`CREATE DATABASE "${safeDbName}";`);
+            console.log(`✅ [DB Notice] Database "${dbName}" created successfully!`);
+        }
+    } catch (err) {
+        console.error('❌ [DB Error] Failed to ensure database exists:', err.message);
+        throw err;
+    } finally {
+        await tempPool.end();
+    }
+}
+
+const pool = new Pool({
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: dbName,
+    ssl: false,
+});
+
+async function initializeDatabase() {
+    try {
+        await ensureDatabaseExists();
+        console.log('⏳ [DB Notice] Auto-inspecting and building essential web service tables...');
+
+        await pool.query(`
+            CREATE TABLE IF NOT EXISTS users (
+                id SERIAL PRIMARY KEY,
+                email VARCHAR(255) UNIQUE NOT NULL,
+                username VARCHAR(100) DEFAULT 'user_' || SUBSTRING(MD5(RANDOM()::TEXT) FROM 1 FOR 6),
+                password VARCHAR(255),
+                about TEXT DEFAULT '',
+                image_url TEXT DEFAULT '',
+                deactivation VARCHAR(255) DEFAULT NULL,
+                categories TEXT[] DEFAULT '{}',
+                posts INT[] DEFAULT '{}',
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            );
+        `);
+
+        await pool.query(`
+            CREATE TABLE IF NOT EXISTS otps (
+                id SERIAL PRIMARY KEY,
+                email VARCHAR(255) NOT NULL,
+                otp VARCHAR(10) NOT NULL,
+                created_at TIMESTAMP NOT NULL
+            );
+        `);
+
+        await pool.query(`
+            CREATE TABLE IF NOT EXISTS posts (
+                id SERIAL PRIMARY KEY,
+                user_id INT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+                post_title VARCHAR(255) NOT NULL DEFAULT '',
+                post_body TEXT,
+                media_url TEXT DEFAULT '',
+                category TEXT[] DEFAULT '{}',
+                likes INT[] DEFAULT '{}', 
+                comments INT DEFAULT 0,
+                deactivation VARCHAR(255) DEFAULT NULL,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            );
+        `);
+
+        await pool.query(`
+            ALTER TABLE posts DROP COLUMN IF EXISTS likes;
+            ALTER TABLE posts ADD COLUMN IF NOT EXISTS likes INT[] DEFAULT '{}';
+        `).catch(() => {});
+
+        await pool.query(`
+            CREATE TABLE IF NOT EXISTS messages (
+                id VARCHAR(255) PRIMARY KEY,
+                sender_id INT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+                receiver_id INT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+                message TEXT,
+                media_url TEXT DEFAULT '',
+                created_at TIMESTAMP NOT NULL
+            );
+        `);
+
+        await pool.query(`
+            CREATE TABLE IF NOT EXISTS comments (
+                id SERIAL PRIMARY KEY,
+                post_id INT NOT NULL REFERENCES posts(id) ON DELETE CASCADE,
+                user_id INT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+                comment TEXT NOT NULL,
+                deactivation VARCHAR(255) DEFAULT NULL,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            );
+        `);
+
+        console.log('✅ [DB Notice] All core database infrastructure structure automated build successful!');
+    } catch (error) {
+        console.error('❌ [DB Error] Failed during automatic table creation:', error.message);
+    }
+}
+
+initializeDatabase();
+module.exports = pool;</code></pre>
+
+    <h2>🛡️ 2. Development Environment Bypass & Optimization Source Code Patch</h2>
+
+    <h3>① External Email (Brevo) API Blocking Bypass & Data Refinement</h3>
+    <p><strong>File Physical Location:</strong> <code>backend/src/services/serviceOTP.js</code></p>
+    <pre><code>async function GetOtp(email, type) {
+    validator.Email(email);
+    const otp = GenerateOTP(6);
+    console.log('🚀 [Development Cheat Code] Issued verification code: ', otp);
+    await modelOtp.SetOtp(email, otp);
+
+    try {
+        await SendMail(email, otp, type);
+    } catch (e) {
+        console.log('📬 Ignoring email communication failure log and running dev bypass:', e.message);
+    }
+
+    return `OTP- ${otp}`; 
+}</code></pre>
+
+    <h3>② Category Comma String Array Conversion & Assignment Patch</h3>
+    <p><strong>File Physical Location:</strong> <code>backend/src/model/modelPost.js</code></p>
+    <pre><code>// [Query feature] split(',') processing for ANY($1) array matching
+const categoriesArray = typeof categories === 'string' 
+    ? categories.split(',') 
+    : (Array.isArray(categories) ? categories : []);
+
+// [Registration feature] Array wrapping patch to prevent malformed array literal
+const categoryArray = typeof category === 'string' 
+    ? [category] 
+    : (Array.isArray(category) ? category : []);</code></pre>
+
+    <h2>💾 3. Local Disk File Image Upload Transition</h2>
+    <p><strong>Backend File Physical Location:</strong> <code>backend/src/app.js</code> (Must be placed right above <code>app.use(router)</code>)</p>
+    <pre><code>const multer = require('multer');
+const path = require('path');
+const fs = require('fs');
+
+const uploadDir = path.join(__dirname, '..', 'uploads');
+if (!fs.existsSync(uploadDir)) {
+    fs.mkdirSync(uploadDir, { recursive: true });
+}
+
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => cb(null, uploadDir),
+    filename: (req, file, cb) => cb(null, Date.now() + '-' + file.originalname)
+});
+const upload = multer({ storage: storage });
+
+app.use('/uploads', express.static(uploadDir));
+
+app.post('/upload', upload.single('image'), (req, res) => {
+    if (!req.file) return res.status(400).json({ error: 'No file provided.' });
+    const fileUrl = `http://localhost:1000/uploads/${req.file.filename}`;
+    res.json({ url: fileUrl });
+});</code></pre>
+
+    <h2>🏁 4. Integrity Full System Operation Guide (Reset & Play)</h2>
+    <ul>
+        <li><strong>Step 1 (Structure Destruction):</strong> Drop existing tables in pgAdmin 4 Query Tool window.
+            <pre><code>DROP TABLE IF EXISTS users, otps, posts, messages, comments CASCADE;</code></pre>
+        </li>
+        <li><strong>Step 2 (Dependency Check):</strong> Run <code>npm install multer</code> in the backend terminal.</li>
+        <li><strong>Step 3 (Start Backend):</strong> Start the server with <code>npm run dev</code> in the backend folder.</li>
+        <li><strong>Step 4 (Start Frontend):</strong> Run <code>npm run dev</code> in the frontend folder and access <code>http://localhost:5173</code> in your browser.</li>
+        <li><strong>Step 5 (Cheat Pass):</strong> After requesting login, type the <strong>yellow 6-digit OTP number printed in the backend terminal console window</strong> on the screen to enter!</li>
+    </ul>
+
+</body>
+</html>

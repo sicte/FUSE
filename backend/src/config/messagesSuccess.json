@@ -1,0 +1,65 @@
+{
+    "otpSent": [
+        "OTP launched! Try not to forget it 🚀",
+        "OTP's flying in... don't blink or you'll miss it 👀",
+        "OTP sent. Check your inbox, genius 📬",
+        "It's OTP, not rocket science. Go grab it 🧠",
+        "OTP's out. Don't enter your birth year this time 😑"
+    ],
+    "otpVerifycation": [
+        "OTP verified. Finally, some brain activity ✅",
+        "You did it! Took only 3 tries 🔓",
+        "Wow, correct OTP. Miracles do happen 🧙",
+        "You're in. Don't act like a hacker now 👨‍💻",
+        "OTP matched. We're as surprised as you are 🤯"
+    ],
+    "userLogin": [
+        "Logged in... try not to ruin things 😅",
+        "You're back. We were doing fine without you 🧍",
+        "Access granted. Regret loading... 🫠",
+        "Welcome back, digital menace 📱",
+        "You're in. Don't forget your password again 🗝️"
+    ],
+    "userUpdate": [
+        "Updated! Finally, your data caught up with 2025 📆",
+        "Profile refreshed... barely improved 😌",
+        "Saved! You're 0.01% cooler now 😎",
+        "Changes applied. Hope that typo was on purpose ✍️",
+        "Your profile just leveled up from 'meh' to 'ok' 💅"
+    ],
+    "userData": [
+        "Fetched your info. It's... a lot 🧾",
+        "Got your data. Still boring though 😴",
+        "Loaded your deets. We promise not to roast (much) 🔍",
+        "Info's here. You sure that's your real pic? 🤔",
+        "User data loaded. Not judging... but 👀"
+    ],
+    "postAdded": [
+        "Post live! Let the silence begin 📢",
+        "Posted. Don't expect applause 👏",
+        "Your thoughts are out there now... yikes 🧠",
+        "Boom. Another post no one asked for 💣",
+        "Congrats! You just made the feed worse 📉"
+    ],
+    "commentAdded": [
+        "Comment dropped like a truth bomb 💥",
+        "You said it. Can't unsay it now 🫨",
+        "Comment posted. Chaos initiated 🗯️",
+        "Your opinion is out there. May the internet forgive you 🙏",
+        "You typed that... on purpose? Bold move 🫣"
+    ],
+    "feedbackSubmit": [
+        "Feedback sent! Our little inbox just got busier 📬",
+        "Boom! Your feedback safely landed with us 🚀",
+        "Feedback submitted. Your thoughts are now famous 🌟",
+        "Sent successfully! Tiny digital pigeons delivered it 🕊️",
+        "Your feedback is in. Time for us to pretend we're serious 🫡"
+    ],
+    "feedbackFail": [
+        "Feedback couldn't be sent. The internet tripped 😵",
+        "Oops! Your feedback got lost on the way 🏃",
+        "Submission failed. Even buttons have bad days 💀",
+        "No luck! The feedback door stayed closed 🚪",
+        "Feedback failed. Try again and scare the bugs away 🐛"
+    ]
+}

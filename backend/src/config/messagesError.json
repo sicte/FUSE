@@ -1,0 +1,191 @@
+{
+    "otpInvalid": [
+        "Nice try, but that OTP's on vacation.",
+        "Wrong digits, champ. Try again!",
+        "That OTP expired faster than your last diet.",
+        "Incorrect OTP. You sure you're typing?",
+        "OTP fail. Were you even close?"
+    ],
+    "otpWrong": [
+        "LOL, not even close. Wrong OTP.",
+        "Nope. That OTP's from another timeline.",
+        "Guess harder, not smarter!",
+        "Still wrong. Did your cat type that?",
+        "OTP fail detected. Retry with brains!"
+    ],
+    "otpExpire": [
+        "That OTP's older than your memes.",
+        "Expired like milk in the sun.",
+        "RIP OTP. Try a fresh one.",
+        "Gone. Poof. Try again.",
+        "That code's history. Get a new one!"
+    ],
+    "otpEmailNotFound": [
+        "OTP without email? Wizardry!",
+        "We need your email, not your dreams.",
+        "Try real input this time.",
+        "Where's the email, detective?",
+        "Email MIA. Try harder!"
+    ],
+    "otpNF": [
+        "OTP not found. Try checking your life choices.",
+        "That code doesn't even exist here.",
+        "Looking for OTPs in the wrong places?",
+        "Still no OTP. Try again, maybe slower.",
+        "Try a real one, not fiction."
+    ],
+    "emailInvalid": [
+        "That email? It's from another universe.",
+        "Real emails only. Not fanfiction.",
+        "Fix your typo storm, please.",
+        "That email's imaginary. Like unicorns.",
+        "Try again, email wizard."
+    ],
+    "emailExist": [
+        "Already taken, just like your ex.",
+        "That email's been around the block.",
+        "Try a new one, trendsetter.",
+        "Duplicate alert! Pick another.",
+        "Email's taken. Your move, genius."
+    ],
+    "idInvalid": [
+        "This ID ghosted us.",
+        "Fake ID vibes. Try again.",
+        "Wrong ID. You sure it's yours?",
+        "Nice try, secret agent.",
+        "That ID belongs to Narnia."
+    ],
+    "aboutLess": [
+        "Too short. Even Twitter demands more.",
+        "C'mon, tell us *something*.",
+        "More words, fewer excuses.",
+        "Are you shy or lazy?",
+        "Give us the tea, not silence!"
+    ],
+    "aboutLarge": [
+        "Writing a novel? Chill!",
+        "Wrap it up, Shakespeare.",
+        "Too long. This ain't a blog.",
+        "Save some words for tomorrow.",
+        "Brief = classy. Try it."
+    ],
+    "userNameLess": [
+        "Username needs more personality.",
+        "That's not a username, it's a typo.",
+        "Add a few more letters, poet.",
+        "Too short. We blinked and missed it.",
+        "Your username's on a diet. Add more!"
+    ],
+    "userNameLarge": [
+        "Username's doing a marathon. Shorten it.",
+        "Even essays are shorter than this.",
+        "You writing a story or logging in?",
+        "Keep it short, superstar.",
+        "Long usernames = tryhard energy."
+    ],
+    "usernameExist": [
+        "Someone else beat you to it.",
+        "Originality left the chat.",
+        "Taken. Like your favorite username.",
+        "Already vibing with another user.",
+        "Try again, copycat."
+    ],
+    "urlInvalid": [
+        "That URL's cooked. Try raw.",
+        "Nope. Even Chrome gave up.",
+        "Link's as broken as my sleep.",
+        "We need a real link, not gibberish.",
+        "That's not a URL, that's confusion."
+    ],
+    "jwtInvalid": [
+        "Bad token. Naughty!",
+        "That token went rogue.",
+        "No party without a valid token!",
+        "Even tokens need to behave.",
+        "Try logging in like a normal person."
+    ],
+    "jwtRequired": [
+        "Token required. This ain't free entry.",
+        "Access denied. Token's missing!",
+        "No token, no fun.",
+        "Where's your token, explorer?",
+        "Bring your ticket next time!"
+    ],
+    "categoryInvalid": [
+        "What even is that category?",
+        "Pick a real one, not fantasy land.",
+        "This isn't Hogwarts. Choose wisely.",
+        "Invalid category. Invalid vibes.",
+        "Nope. Try a valid category, legend."
+    ],
+    "categoriesArray": [
+        "Oops! Wrong input, right attitude.",
+        "We need an array, not confusion.",
+        "Categories wanted. Not gibberish.",
+        "Nice try, coder. But no.",
+        "Try again, syntax master."
+    ],
+    "postNotFound": [
+        "Post vanished into the void.",
+        "This post pulled a Houdini.",
+        "Gone like your WiFi signal.",
+        "404: Post not in this realm.",
+        "It's not you, it's the post."
+    ],
+    "postTitleLess": [
+        "Post title too tiny. Pump it up!",
+        "5+ characters, not 5 emojis.",
+        "Title's missing its punch.",
+        "Add more words, Shakespeare.",
+        "That's not a title, it's a sneeze."
+    ],
+    "postTitleMore": [
+        "Shorten that title, novel-writer.",
+        "Title's longer than your to-do list.",
+        "Save some words for the post body.",
+        "Keep titles sharp, not long.",
+        "Too many characters, not enough vibe."
+    ],
+    "postBodyLess": [
+        "The body needs body!",
+        "More words, less mystery.",
+        "Give us the full story, not a tweet.",
+        "Add more drama. Or details.",
+        "We need substance, not silence."
+    ],
+    "postBodyMore": [
+        "This ain't a fantasy trilogy.",
+        "10,000 words? Save it for your book.",
+        "Too much info. Chill.",
+        "Cut the fluff, keep the fire.",
+        "Body overflow. Simplify, champ."
+    ],
+    "noFieldToUpdate": [
+        "Update what? Your vibe?",
+        "You changed nothing. Literally.",
+        "No updates = no applause.",
+        "Try again when you're ready.",
+        "Nothing to update = no fun."
+    ],
+    "commentLess": [
+        "Too short. Add some spice!",
+        "Comment needs flavor, not crumbs.",
+        "Say more. Don't be shy.",
+        "Short comment, short attention span.",
+        "Be bold, say something real!"
+    ],
+    "commentMore": [
+        "Paragraphs? In comments? Bold.",
+        "This ain't your diary.",
+        "Chop chop, keep it short.",
+        "Summarize, don't sermonize.",
+        "We read comments, not novels."
+    ],
+    "invalidDate": [
+        "That's not a date, it's a riddle.",
+        "Try again, time traveler.",
+        "That date doesn't exist. Yet.",
+        "Your calendar needs therapy.",
+        "Dates, not guesses please!"
+    ]
+}

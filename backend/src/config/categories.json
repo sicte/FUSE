@@ -1,0 +1,100 @@
+{
+    "Entertainment": [
+        "Movies",
+        "Music",
+        "Dance",
+        "TVSeries",
+        "ComedyShows",
+        "CelebrityNews",
+        "Theatre",
+        "ViralVideos"
+    ],
+    "TechWorld": [
+        "Gadgets",
+        "TechNews",
+        "AITrends",
+        "Robotics",
+        "SoftwareReviews",
+        "IoTDevices",
+        "QuantumComputing"
+    ],
+    "CodingCorner": [
+        "WebDevelopment",
+        "GameDevelopment",
+        "AppDevelopment",
+        "MachineLearning",
+        "ProgrammingFundamentals",
+        "BackendDevelopment",
+        "OpenSourceProjects"
+    ],
+    "DesignHub": [
+        "UIUXDesign",
+        "GraphicDesign",
+        "GameDesign",
+        "TwoDArt",
+        "ThreeDArt",
+        "Animation",
+        "Illustration",
+        "MotionGraphics"
+    ],
+    "GamingWorld": [
+        "ConsoleGaming",
+        "PCGaming",
+        "MobileGaming",
+        "RPGGames",
+        "FPSGames",
+        "Esports",
+        "GameReviews",
+        "LiveStreams"
+    ],
+    "FitnessLife": [
+        "Workouts",
+        "Yoga",
+        "Nutrition",
+        "MentalHealth",
+        "BodyBuilding",
+        "HomeFitness",
+        "GymTips",
+        "HealthyRecipes"
+    ],
+    "TravelExplorer": [
+        "TravelVlogs",
+        "BudgetTravel",
+        "AdventureTrips",
+        "CityGuides",
+        "CulturalExperiences",
+        "FoodTourism",
+        "NatureTrips",
+        "TravelTips"
+    ],
+    "FoodCravings": [
+        "Recipes",
+        "Baking",
+        "StreetFood",
+        "InternationalCuisine",
+        "VegetarianDelights",
+        "NonVegSpecials",
+        "Desserts",
+        "RestaurantReviews"
+    ],
+    "FashionTrendz": [
+        "MensWear",
+        "WomensWear",
+        "Makeup",
+        "Footwear",
+        "Accessories",
+        "CelebrityStyle",
+        "DIYFashion",
+        "SeasonalTrends"
+    ],
+    "FinanceTalks": [
+        "StockMarket",
+        "CryptoCurrency",
+        "PersonalFinance",
+        "SavingTips",
+        "RealEstate",
+        "MutualFunds",
+        "FinancialNews",
+        "TaxPlanning"
+    ]
+}
